@@ -1,0 +1,430 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.my-neighbor-totoro {
+  min-height: calc(100vw / 1920 * 1080);
+  display: flex;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Ensure items inside nav are centered vertically as well */
+  background-color: #f1f0f5;
+  position: fixed;
+  z-index: 99;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%); /* Center the nav itself */
+  border-radius: 50px;
+  padding: 10px 10px; /* Add some padding if needed */
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  border-radius: 50px;
+}
+
+nav li:hover {
+  background-color: #1d5236;
+}
+
+nav li:hover a:link,
+nav li:hover a:visited {
+  color: #f1f0f5;
+}
+
+nav li a:link,
+nav li a:visited {
+  padding: 16px;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #1d5236;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.my-neighbor-totoro img {
+  position: absolute;
+  width: 100vw;
+  height: auto;
+  cursor: none;
+  pointer-events: none;
+}
+
+.my-neighbor-totoro img.totoro {
+  bottom: 0;
+  position: absolute;
+  width: auto;
+  height: 60%;
+}
+
+.my-neighbor-totoro div.card {
+  transform: translateX(0);
+  padding: 1%;
+  gap: 10px;
+  background-color: rgba(241, 240, 245, 0.8);
+  position: absolute;
+  right: 25%;
+  top: 20%;
+  width: 40%;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 10px;
+}
+
+.my-neighbor-totoro div.card h1 {
+  color: #1d5236;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.my-neighbor-totoro div.card p {
+  text-align: justify;
+  padding-top: 12px;
+  font-size: 1rem;
+  color: #2d6053;
+}
+
+.my-neighbor-totoro div.card ul {
+  padding-top: 12px;
+  list-style-type: none;
+  display: inline-flex;
+  gap: 10px;
+}
+
+.my-neighbor-totoro div.card ul li {
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.my-neighbor-totoro div.card ul li.tag-header {
+  font-weight: bold;
+  color: #1d5236;
+}
+
+.my-neighbor-totoro div.card ul li.tag {
+  text-align: center;
+  font-weight: bold;
+  background-color: #1d5236;
+  color: #f1f0f5;
+}
+
+.review {
+  background-color: #1d5236;
+  /* min-height: calc(100vw / 1920 * 360); */
+  min-height: max-content;
+  clear: both;
+  position: relative;
+  /* height: fit-content; */
+  display: flex;
+  position: relative;
+  color: #f1f0f5;
+  display: inline-flex;
+  z-index: 1;
+}
+
+.review .review-container {
+  display: inline-flex;
+  margin: auto;
+}
+
+.review .review-header {
+  display: block;
+  margin: auto;
+}
+
+.review .review-header h1 {
+  font-size: 2rem;
+  /* padding: 10px; */
+}
+
+.review .review-header p,
+.review .review-header a,
+.review .review-header a:visited {
+  font-size: 1rem;
+  color: #f1f0f5;
+}
+
+.review .review-container h2 {
+  font-size: 1rem;
+  padding: 10px;
+}
+
+.review-container .rating,
+.review-container .favorites,
+.review-container .rank {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.review-container svg {
+  height: 40%;
+  width: 40%;
+}
+
+.review-container p {
+  font-size: 1rem;
+}
+
+.gallery {
+  clear: both;
+  position: relative;
+  background-color: #f1f0f5;
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+  color: #1d5236;
+  overflow: hidden;
+  pointer-events: none;
+  cursor: none;
+}
+
+.gallery .gallery-container {
+  width: 100vw;
+  display: flex;
+  pointer-events: none;
+}
+
+.gallery .gallery-container:nth-child(even) {
+  justify-content: flex-end;
+}
+
+.gallery .gallery-container:nth-child(odd) {
+  justify-content: flex-start;
+}
+
+.gallery .gallery-container img.image-left,
+.gallery .gallery-container img.image-right {
+  width: 50vw;
+  height: auto;
+  min-height: 200px;
+}
+
+.gallery .gallery-container .gallery-desc {
+  margin: auto;
+  text-align: center;
+  width: 100vw;
+}
+
+.gallery .gallery-container .gallery-desc p {
+  margin-inline: 15px;
+}
+
+.gallery .gallery-container .gallery-desc h1 {
+  font-style: italic;
+}
+
+.credit {
+  background-color: #2e6265;
+  clear: both;
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+  color: #f1f0f5;
+  overflow: hidden;
+  pointer-events: none;
+  cursor: none;
+  padding: 0 10px;
+}
+
+.credit .column {
+  float: left;
+  width: 50%;
+}
+
+.credit .credit-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.credit .credit-container .credit-title {
+  font-size: 1.5rem;
+}
+
+.credit .credit-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.credit .credit-container .credit-title,
+.credit .credit-container .credit-text {
+  margin: auto;
+}
+
+.credit .credit-container .credit-title {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.credit .credit-container .credit-text {
+  font-size: 1rem;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+
+.credit .credit-container .credit-text h2 {
+  gap: 10px;
+  padding-top: 10px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.footer {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f0f5;
+  color: #2d6053;
+  margin: auto;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    left: 0;
+    transform: translateX(0);
+    top: 0;
+    position: relative;
+    width: 90%;
+  }
+
+  nav li a:link,
+  nav li a:visited {
+    padding: 8px;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    font-size: 0.75rem;
+    color: #1d5236;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+
+  .my-neighbor-totoro {
+    min-height: calc(100vw / 768 * 432);
+    display: flex;
+    position: relative;
+  }
+
+  .my-neighbor-totoro div.card {
+    gap: 5px;
+    right: 20%;
+    top: 20%;
+    width: 60%;
+    z-index: 0;
+  }
+
+  .my-neighbor-totoro div.card h1 {
+    font-size: 1.25rem;
+  }
+
+  .my-neighbor-totoro div.card p {
+    padding-top: 5px;
+    font-size: 0.5rem;
+  }
+
+  .my-neighbor-totoro div.card ul {
+    padding-top: 6px;
+    list-style-type: none;
+    display: inline-flex;
+    gap: 5px;
+  }
+
+  .my-neighbor-totoro div.card ul li {
+    font-size: 0.5rem;
+  }
+
+  .my-neighbor-totoro div.card ul li {
+    padding: 5px;
+    border-radius: 10px;
+  }
+
+  .review {
+    min-height: calc(100vw / 768 * 180);
+    clear: both;
+    position: relative;
+    display: flex;
+    position: relative;
+    color: #f1f0f5;
+    display: inline-flex;
+    z-index: 1;
+  }
+
+  .review .review-header {
+    padding-left: 10px;
+  }
+
+  .review .review-header h1 {
+    font-size: 1rem;
+  }
+
+  .review .review-header p,
+  .review .review-header a,
+  .review .review-header a:visited {
+    font-size: 0.75rem;
+  }
+
+  .review .review-container h2 {
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 5px;
+  }
+
+  .review-container p {
+    text-align: center;
+    font-size: 0.75rem;
+  }
+
+  .gallery .gallery-container .gallery-desc h1 {
+    font-size: 1rem;
+  }
+
+  .gallery .gallery-container .gallery-desc p {
+    font-size: 0.75rem;
+  }
+
+  .credit .credit-container .credit-title {
+    font-size: 1rem;
+  }
+
+  .credit .credit-container .credit-text {
+    font-size: 0.5rem;
+    padding-bottom: 5px;
+  }
+}
